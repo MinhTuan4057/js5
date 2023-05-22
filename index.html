@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="./new.html">
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        #areaSelect:hover {
+            cursor: pointer;
+        }
+        #typeSelect:hover {
+            cursor: pointer;
+        }
+        #btnSubmit:hover {
+            cursor: pointer;
+            background-color: #fb6445;
+        }
+        #btnSubmit {
+            transition: all ease 0.5s;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #ee4d2d;
+            border: none;
+            color: white;
+        }
+        #btn {
+            transition: all ease 0.5s;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #ee4d2d;
+            border: none;
+            color: white;
+        }
+        #btn:hover {
+            cursor: pointer;
+            background-color: #fb6445;
+        }
+        #btn2 {
+            transition: all ease 0.5s;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #ee4d2d;
+            border: none;
+            color: white;
+        }
+        #btn2:hover {
+            cursor: pointer;
+            background-color: #fb6445;
+        }
+        #btn3 {
+            transition: all ease 0.5s;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: #ee4d2d;
+            border: none;
+            color: white;
+        }
+        #btn3:hover {
+            cursor: pointer;
+            background-color: #fb6445;
+        }
+        .icon {
+            font-size: 20px;
+            color: #ee4d2d;
+            margin: 0 5px 0 20px;
+            display: flex;
+        }
+        .total {
+            display: flex;
+            align-items: center;
+            margin: 10px 90px 0;
+            background: #d1f2de;
+            padding: 18px 0;
+            border: 1px solid #a9ddc0;
+            border-radius: 5px;
+        }
+    </style>
+
+
+
+    <div class="bg__acg" style="background-color: #ccc; max-width: 1300px; margin:auto; padding: 30px 0;">
+        <div class="post1" style="max-width: 1100px; margin:auto; text-align: center; border: 1px solid rgb(224, 217, 217); background-color: #fff; padding: 20px 0 20px; border-radius: 10px">
+        <h1>Bài 1: Quản lý tuyển sinh</h1>
+    <input id="benchmarkInput" type="text" placeholder="Điểm chuẩn" style="width: 150px; height:30px; margin-right: 10px"/>
+      <input id="subject1Input" type="text" placeholder="Điểm Môn 1" style="width: 150px; height:30px; margin-right: 10px"/>
+      <input id="subject2Input" type="text" placeholder="Điểm Môn 2" style="width: 150px; height:30px; margin-right: 10px"/>
+      <input id="subject3Input" type="text" placeholder="Điểm Môn 3" style="width: 150px; height:30px;  margin-right: 10px"/>
+      <select id="areaSelect" style="width: 110px; height: 30px; margin-right: 10px;">
+        <option>Khu vực</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="X">Không</option>
+      </select>
+      <select id="typeSelect" style="width: 110px; height: 30px; margin-right: 10px;">
+        <option>Loại đối tượng</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="X">0</option>
+      </select>
+      <button id="btnSubmit">Kiểm tra</button>
+      <div class="total">
+        <i class="icon fa-solid fa-hand-point-right"></i>
+      <p style="margin:0;"><span class="result" id="check" style="margin: 0;"></span></p>
+      </div>
+    </div>
+
+
+    <div class="post1" style="max-width: 1100px; margin:50px auto; text-align: center; border: 1px solid rgb(224, 217, 217); background-color: #fff; padding: 20px 0 20px; border-radius: 10px">
+        <h1>Bài 2: Tính tiền điện</h1>
+      <input id="NameInput" type="text" placeholder="Họ và tên" style="width: 200px; height:30px; margin-right: 10px"/>
+      <input id="KwInput" type="text" placeholder="Số Kw tiêu thụ" style="width: 200px; height:30px;  margin-right: 10px"/>
+      <button id="btn">Tính</button>
+      <div class="total">
+        <i class="icon fa-solid fa-hand-point-right"></i>
+      <p style="margin:0;"><span class="result" id="check2" style="margin: 0;"></span></p>
+      </div>
+    </div>
+
+
+    <div class="post2" style="max-width: 1100px; margin:auto; text-align: center; border: 1px solid rgb(224, 217, 217); background-color: #fff; padding: 20px 0 20px; border-radius: 10px">
+        <h1>Bài 3: Tính thuế thu nhập cá nhân</h1>
+      <input id="calInput1" type="text" placeholder="Họ và tên" style="width: 200px; height:30px; margin-right: 10px"/>
+      <input id="calInput2" type="text" placeholder="Tổng thu nhập/năm" style="width: 200px; height:30px; margin-right: 10px"/>
+      <input id="calInput3" type="text" placeholder="Số người phụ thuộc" style="width: 200px; height:30px;  margin-right: 10px"/>
+      <button id="btn2">Tính</button>
+      <div class="total">
+        <i class="icon fa-solid fa-hand-point-right"></i>
+      <p style="margin:0;"><span class="result" id="check3" style="margin: 0;"></span></p>
+      </div>
+    </div>
+
+    <div class="post2" id="form" style="max-width: 1100px; margin:auto; text-align: center; border: 1px solid rgb(224, 217, 217); background-color: #fff; padding: 20px 0 20px; border-radius: 10px">
+        <h1>Bài 4: Tính tiền cáp</h1>
+        <select id="ClientInput" style="width: 200px; height:35px; margin-right: 10px">
+            <option value="TypeClient" >Chọn loại khách hàng</option>
+            <option value="HousePep">Nhà Dân</option>
+            <option value="Enterprise">Doanh Nghiệp
+                <input id="TypeInput" type="text" placeholder="So kết nối" style="width: 200px; height:30px; margin-right: 10px; display: none;"/>
+            </option>
+        </select>
+      <input id="TagInput" type="text" placeholder="Nhập mã khách hàng" style="width: 200px; height:30px; margin-right: 10px"/>
+      <input id="connectInput" type="text" placeholder="So kênh cao cấp" style="width: 200px; height:30px;  margin-right: 10px"/>
+      <button id="btn3">Tính</button>
+      <div class="total">
+        <i class="icon fa-solid fa-hand-point-right"></i>
+      <p style="margin:0;"><span class="result" id="check4" style="margin: 0;"></span></p>
+      </div>
+    </div>
+
+</div>
+
+    
+    <script src="./base.js"></script>
+</body>
+</html>
